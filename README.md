@@ -42,7 +42,7 @@ JSON format for convenient processing.
 ## scrape_public.py
 
 This script scrapes public journal entries directly from the website without authentication.
-It is currently configured for `vip-in.livejournal.com` but can be modified.
+It is currently configured for `<username.livejournal.com` but can be modified.
 It extracts the Title, Date, and Content of each entry and compiles them into a single 
 Markdown file `journal_entries_compiled.md`.
 
@@ -50,6 +50,11 @@ Markdown file `journal_entries_compiled.md`.
 
 A utility script to test the scraping logic on a single journal entry URL.
 Useful for debugging CSS selectors and content extraction.
+
+## filter_poems.py
+
+This script processes the compiled `journal_entries_compiled.md` file and filters out entries that appear to be poems based on heuristics (line length, stanza breaks) and specific title keywords.
+It outputs a new file `journal_poems_only.md` containing only the poem entries.
 
 ## Requirements
 
