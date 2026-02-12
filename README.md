@@ -39,6 +39,18 @@ This script will download comments from your blog as
 `comments-json/all.json` with all the comments data in
 JSON format for convenient processing.
 
+## scrape_public.py
+
+This script scrapes public journal entries directly from the website without authentication.
+It is currently configured for `vip-in.livejournal.com` but can be modified.
+It extracts the Title, Date, and Content of each entry and compiles them into a single 
+Markdown file `journal_entries_compiled.md`.
+
+## test_single_entry.py
+
+A utility script to test the scraping logic on a single journal entry URL.
+Useful for debugging CSS selectors and content extraction.
+
 ## Requirements
 
 * `dateutil`
